@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --agora-primary: #a8d54d;
+  --agora-accent: #ff8c42;
+  --agora-secondary: #6b4e9e;
+  --agora-neutral: #f5f5f5;
+  --agora-dark: #1f1f1f;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: var(--agora-neutral);
+  color: #2a2a2a;
+  scroll-behavior: smooth;
+}
+
+#q-app {
+  min-height: 100vh;
+  background: #fff;
+}
+
+.section {
+  padding: 4rem 1rem;
+}
+
+.section-title {
+  font-weight: 700;
+  color: var(--agora-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-subtitle {
+  color: #505050;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-overlay {
+  background: linear-gradient(120deg, rgba(31, 31, 31, 0.7), rgba(104, 62, 150, 0.6));
+}
+
+.mascot-wrapper {
+  width: 100%;
+}
+
+.mascot-card {
+  width: min(360px, 90vw);
+  background: transparent;
+  border-radius: 36px;
+  padding: 0;
+  box-shadow: none;
+  margin: 0 auto;
+  animation: float 6s ease-in-out infinite;
+  position: relative;
+}
+
+.mascot-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3));
+}
+
+.mascot-speech {
+  position: absolute;
+  top: -12%;
+  right: 8%;
+  max-width: 190px;
+  padding: 0.8rem 1rem;
+  background: rgba(111, 78, 158, 0.95);
+  color: #fff;
+  font-size: 0.85rem;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  line-height: 1.35;
+}
+
+.mascot-speech::after {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  right: 26px;
+  border-width: 14px 10px 0 10px;
+  border-style: solid;
+  border-color: rgba(111, 78, 158, 0.95) transparent transparent transparent;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.level-card {
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.07);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.q-card.section-card {
+  border-radius: 24px;
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.08);
+}
+
+.gradient-background {
+  background: linear-gradient(135deg, #ffffff 0%, #f7fbef 52%, #fcefe5 100%);
+}
+
+.whatsapp-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 2000;
+}
+
+.q-carousel__slides-container img {
+  object-fit: cover;
+}
+
+.footer-links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.team-card img {
+  border-radius: 999px;
+}
+
+.logo-brand {
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo-brand img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 1023px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 2.75rem 0.75rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    padding: 0 0.25rem;
+  }
+
+  .q-card {
+    border-radius: 22px;
+  }
+}
+
+@media (max-width: 599px) {
+  .mascot-card {
+    width: min(280px, 92vw);
+    padding: 0;
+  }
+
+  .mascot-speech {
+    max-width: 150px;
+    font-size: 0.75rem;
+    top: -16%;
+    right: 2%;
+  }
+
+  .section {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .section-title {
+    font-size: 1.35rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .q-toolbar {
+    flex-wrap: wrap;
+    padding: 0.75rem;
+  }
+
+  .whatsapp-fab {
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  .facility-copy {
+    padding: 20px !important;
+  }
+
+  .q-card.h-100 {
+    padding: 1rem;
+  }
+}
